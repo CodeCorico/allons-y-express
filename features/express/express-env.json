@@ -1,0 +1,26 @@
+{
+  "env": [{
+    "type": "confirm",
+    "name": "EXPRESS",
+    "message": "Enable Express:"
+  }, {
+    "type": "input",
+    "name": "EXPRESS_COUNT",
+    "message": "Many Express instances do you want to start:",
+    "default": 1
+  }, {
+    "type": "input",
+    "name": "EXPRESS_RESTARTS",
+    "message": "Many times Express instances have to restart on crash:",
+    "default": 10
+  }, {
+    "type": "input",
+    "name": "EXPRESS_COOKIE_SECRET",
+    "message": "Secret passphrase to crypt the Express cookies:"
+  }, {
+    "type": "input",
+    "name": "EXPRESS_PORT",
+    "message": "Start ports range for the Express instances:",
+    "default": "86"
+  }]
+}
