@@ -45,7 +45,7 @@ module.exports = function($allonsy, $index, $done) {
     });
 
     http.listen(server.get('port'), function() {
-      $allonsy.logInfo('► SERVER (#' + $index + ') IS RUNNING ON :' + server.get('port') + '\n');
+      $allonsy.outputInfo('► SERVER (#' + $index + ') IS RUNNING ON :' + server.get('port') + '\n');
     });
 
     $done();
