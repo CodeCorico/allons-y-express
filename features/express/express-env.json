@@ -7,20 +7,24 @@
     "type": "input",
     "name": "EXPRESS_COUNT",
     "message": "Express instances do you want to start:",
-    "default": 1
+    "default": 1,
+    "when": "EXPRESS=true"
   }, {
     "type": "input",
     "name": "EXPRESS_RESTARTS",
     "message": "Express instances have to restart on crash:",
-    "default": 10
+    "default": 10,
+    "when": "EXPRESS=true"
   }, {
     "type": "input",
     "name": "EXPRESS_COOKIE_SECRET",
-    "message": "Secret passphrase to crypt the Express cookies:"
+    "message": "Secret passphrase to crypt the Express cookies:",
+    "when": "EXPRESS=true"
   }, {
     "type": "input",
     "name": "EXPRESS_PORT",
     "message": "Start ports range for the Express instances:",
-    "default": "86"
+    "default": "86",
+    "when": "EXPRESS=true"
   }]
 }
