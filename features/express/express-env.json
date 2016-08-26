@@ -6,7 +6,7 @@
   }, {
     "type": "input",
     "name": "EXPRESS_COUNT",
-    "message": "Express instances do you want to start:",
+    "message": "Express instances do you want to start (number or \"cpu\"):",
     "default": 1,
     "when": "EXPRESS=true"
   }, {
