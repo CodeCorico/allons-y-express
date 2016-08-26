@@ -46,6 +46,11 @@ module.exports = function($allonsy, $index, $done) {
 
     http.listen(server.get('port'), function() {
       $allonsy.outputInfo('► SERVER (#' + $index + ') IS RUNNING ON :' + server.get('port') + '\n');
+
+      $allonsy.sendMessage({
+        event: 'update(express/server)',
+        port: server.get('port')
+      });
     });
 
     $done();

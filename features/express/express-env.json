@@ -17,6 +17,12 @@
     "when": "EXPRESS=true"
   }, {
     "type": "input",
+    "name": "EXPRESS_URL",
+    "message": "URL of your Express servers can be called:",
+    "default": "localhost",
+    "when": "EXPRESS=true"
+  }, {
+    "type": "input",
     "name": "EXPRESS_COOKIE_SECRET",
     "message": "Secret passphrase to crypt the Express cookies:",
     "when": "EXPRESS=true"
