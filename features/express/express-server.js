@@ -10,13 +10,13 @@ module.exports = function($allonsy, $index, $done) {
   require(path.resolve(__dirname, 'express-bootstrap-server.js'))($allonsy, function() {
     var server = express();
 
-    DependencyInjection.service('$express', [function() {
+    DependencyInjection.service('$express', function() {
       return express;
-    }]);
+    });
 
-    DependencyInjection.service('$server', [function() {
+    DependencyInjection.service('$server', function() {
       return server;
-    }]);
+    });
 
     server.use(bodyParser.urlencoded({
       extended: true
@@ -34,9 +34,9 @@ module.exports = function($allonsy, $index, $done) {
 
     var http = require('http').Server(server);
 
-    DependencyInjection.service('$http', [function() {
+    DependencyInjection.service('$http', function() {
       return http;
-    }]);
+    });
 
     var expressFiles = $allonsy.findInFeaturesSync('*-express.js');
 
