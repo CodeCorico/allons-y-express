@@ -30,7 +30,7 @@ module.exports = function($allonsy, $index, $done) {
 
     server.use(cookieParser(process.env.EXPRESS_COOKIE_SECRET));
 
-    server.set('port', parseInt(process.env.EXPRESS_PORT || 86, 10) + $index);
+    server.set('port', parseInt(process.env.EXPRESS_PORT || 8086, 10) + $index);
 
     var http = require('http').Server(server);
 

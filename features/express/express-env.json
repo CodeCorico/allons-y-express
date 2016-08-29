@@ -30,7 +30,7 @@
     "type": "input",
     "name": "EXPRESS_PORT",
     "message": "Start ports range for the Express instances:",
-    "default": "86",
+    "default": "8086",
     "when": "EXPRESS=true"
   }]
 }
