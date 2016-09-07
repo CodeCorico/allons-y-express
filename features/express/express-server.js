@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = function($allonsy, $index, $done) {
+module.exports = function($allonsy, $processIndex, $done) {
   var express = require('express'),
       path = require('path'),
       bodyParser = require('body-parser'),
@@ -30,7 +30,7 @@ module.exports = function($allonsy, $index, $done) {
 
     server.use(cookieParser(process.env.EXPRESS_COOKIE_SECRET));
 
-    server.set('port', parseInt(process.env.EXPRESS_PORT || 8086, 10) + $index);
+    server.set('port', parseInt(process.env.EXPRESS_PORT || 8086, 10) + $processIndex);
 
     var http = require('http').Server(server);
 
@@ -45,7 +45,7 @@ module.exports = function($allonsy, $index, $done) {
     });
 
     http.listen(server.get('port'), function() {
-      $allonsy.outputInfo('► SERVER (#' + $index + ') IS RUNNING ON :' + server.get('port') + '\n');
+      $allonsy.outputInfo('► SERVER (#' + $processIndex + ') IS RUNNING ON :' + server.get('port') + '\n');
 
       $allonsy.sendMessage({
         event: 'update(express/server)',
