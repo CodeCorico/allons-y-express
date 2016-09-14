@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = function($allonsy) {
-  $allonsy.outputInfo('\n► servers:\n\n');
+  $allonsy.outputInfo('\n► servers:\n');
 
   var path = require('path');
 
@@ -11,7 +11,7 @@ module.exports = function($allonsy) {
       child = $allonsy.childByName('Allons-y Express');
 
   if (!child || !child.processes || !child.processes.length) {
-    $allonsy.outputInfo('  No Express server started\n');
+    $allonsy.outputInfo('  No Express server started');
   }
 
   child.processes.forEach(function(p) {
@@ -20,8 +20,6 @@ module.exports = function($allonsy) {
       url: '?'
     };
 
-    console.log('  ∙ [' + $allonsy.textInfo(p.name) + ' #' + p.id + ']: ' + $allonsy.textWarning(serverData.url));
+    $allonsy.output('  ∙ [' + $allonsy.textInfo(p.name) + ' #' + p.id + ']: ' + $allonsy.textWarning(serverData.url), '\n');
   });
-
-  console.log('');
 };

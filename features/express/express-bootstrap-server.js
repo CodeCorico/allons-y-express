@@ -1,7 +1,6 @@
 'use strict';
 
 module.exports = function($allonsy, callback) {
-
   var path = require('path'),
       async = require('async');
 
