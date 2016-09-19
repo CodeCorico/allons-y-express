@@ -5,7 +5,7 @@ var path = require('path');
 module.exports = {
   bootstrap: function($allonsy, $options, $done) {
     if ((!process.env.EXPRESS || process.env.EXPRESS == 'true') && $options.owner == 'start') {
-      require(path.resolve(__dirname, 'express-service-back.js'))();
+      require(path.resolve(__dirname, 'models/express-service-back.js'))();
 
       var $ExpressService = DependencyInjection.injector.controller.get('$ExpressService');
 

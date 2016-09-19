@@ -5,7 +5,7 @@ module.exports = function($allonsy) {
 
   var path = require('path');
 
-  require(path.resolve(__dirname, 'express-service-back.js'))();
+  require(path.resolve(__dirname, 'models/express-service-back.js'))();
 
   var $ExpressService = DependencyInjection.injector.controller.get('$ExpressService'),
       child = $allonsy.childByName('Allons-y Express');

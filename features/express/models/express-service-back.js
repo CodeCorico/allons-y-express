@@ -3,7 +3,7 @@ module.exports = function() {
 
   DependencyInjection.service('$ExpressService', function() {
 
-    return new (function ExpressService() {
+    return new (function $ExpressService() {
 
       var _processes = {};
 
