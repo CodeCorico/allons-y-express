@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = function($allonsy) {
-  $allonsy.outputInfo('\n► servers:\n');
+  $allonsy.outputInfo('► servers:\n');
 
   var path = require('path');
 
