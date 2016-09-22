@@ -19,7 +19,7 @@
     "type": "input",
     "name": "EXPRESS_URL",
     "message": "URL of your Express servers can be called:",
-    "default": "localhost",
+    "default": "http://localhost",
     "when": "EXPRESS=true"
   }, {
     "type": "input",

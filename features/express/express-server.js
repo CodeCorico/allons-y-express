@@ -47,6 +47,8 @@ module.exports = function($allonsy, $processIndex, $done) {
     http.listen(server.get('port'), function() {
       $allonsy.outputInfo('► EXPRESS SERVER (#' + $processIndex + ') IS RUNNING ON :' + server.get('port'));
 
+      $allonsy.log('allons-y-express', 'server:start');
+
       $allonsy.sendMessage({
         event: 'update(express/server)',
         port: server.get('port')
