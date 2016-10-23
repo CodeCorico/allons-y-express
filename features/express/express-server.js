@@ -5,7 +5,8 @@ module.exports = function($allonsy, $processIndex, $done) {
       path = require('path'),
       bodyParser = require('body-parser'),
       compression = require('compression'),
-      cookieParser = require('cookie-parser');
+      cookieParser = require('cookie-parser'),
+      uuid = require('node-uuid');
 
   require(path.resolve(__dirname, 'express-bootstrap-server.js'))($allonsy, function() {
     var server = express();
@@ -27,6 +28,13 @@ module.exports = function($allonsy, $processIndex, $done) {
         return /json|text|xls|doc|pdf|javascript|image/.test(res.getHeader('Content-Type'));
       }
     }));
+
+    server.use(function(req, res, next) {
+      req.id = uuid.v1();
+      res.setHeader('X-Request-Id', req.id);
+
+      next();
+    });
 
     server.use(cookieParser(process.env.EXPRESS_COOKIE_SECRET));
 
