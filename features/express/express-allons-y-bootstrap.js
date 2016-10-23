@@ -13,6 +13,13 @@ module.exports = {
         if (args.event == 'update(express/server)') {
           $ExpressService.processServer(args.p, args.port);
         }
+        else if (args.event == 'call(express/servers)') {
+          $allonsy.sendMessage({
+            event: args.event,
+            messageId: args.messageId,
+            servers: $ExpressService.processServers()
+          });
+        }
       });
     }
 

@@ -7,6 +7,10 @@ module.exports = function() {
 
       var _processes = {};
 
+      this.processServers = function() {
+        return _processes;
+      };
+
       this.processServer = function(p, port) {
         if (typeof port == 'undefined') {
           return _processes[p.id];
