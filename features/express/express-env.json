@@ -18,8 +18,8 @@
   }, {
     "type": "input",
     "name": "EXPRESS_URL",
-    "message": "URL of your Express servers can be called:",
-    "default": "http://localhost",
+    "message": "URL of your Express servers can be called (use '{index}' and/or '{port}' for multiple servers):",
+    "default": "http://localhost:{port}",
     "when": "EXPRESS=true"
   }, {
     "type": "input",
