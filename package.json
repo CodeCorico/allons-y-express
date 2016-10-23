@@ -15,7 +15,7 @@
     "npm": ">=3.2"
   },
   "dependencies": {
-    "allons-y": "^1.0.0",
+    "allons-y": "^1.0.1",
     "allons-y-dotenv": "^1.0.0",
     "async": "^2.0.1",
     "body-parser": "^1.15.2",
