@@ -3,7 +3,7 @@
   "version": "1.0.2",
   "description": "Create express servers in the allons-y way.",
   "license": "MIT",
-  "homepage": "http://allons-y.io",
+  "homepage": "https://allons-y.io",
   "author": "CodeCorico <hello@codecorico.com>",
   "bugs": "https://github.com/CodeCorico/allons-y-express/issues",
   "repository": {
@@ -14,8 +14,11 @@
     "node": ">=4.1",
     "npm": ">=3.2"
   },
+  "devDependencies": {
+    "allons-y-dev-chore": "^1.0.0"
+  },
   "dependencies": {
-    "allons-y": "^1.0.1",
+    "allons-y": "^1.0.2",
     "allons-y-dotenv": "^1.0.0",
     "async": "^2.0.1",
     "body-parser": "^1.15.2",
