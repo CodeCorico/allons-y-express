@@ -42,6 +42,12 @@ module.exports = function($allonsy, $processIndex, $done) {
 
     var http = require('http').Server(server);
 
+    DependencyInjection.model('$serverUrl', function() {
+      return process.env.EXPRESS_URL
+        .replace(/{port}/g, server.get('port'))
+        .replace(/{index}/g, $processIndex);
+    });
+
     DependencyInjection.service('$http', function() {
       return http;
     });
